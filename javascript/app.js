@@ -68,12 +68,16 @@ let animals = [new Animal("128948171_118877180071505_2515716263979287604_n.jpg",
                 new Animal("Hiv-ani-renard-arct-5.jpg", new Rectangle(521,328,574,372)),
                 new Animal("Hiv-ani-renard-arct-7.jpg", new Rectangle(307,280,358,313)),
                 new Animal("Jouets-en-peluche-de-sceau-Kawaii-animaux-en-peluche-oreillers-grandes-poup-es-douces-d-corations.jpg_Q90.jpg", new Rectangle(786,597,900,671)),
-                new Animal("271195188_450862449903110_3149505800413493754_n.jpg", new Rectangle(196,512,303,593))];
+                new Animal("271195188_450862449903110_3149505800413493754_n.jpg", new Rectangle(196,512,303,593)),
+                new Animal("268593143_255338459998512_3257250621246015360_n.jpg", new Rectangle(648,384,745,458)),
+                new Animal("270057190_608922453496294_6146720004026654589_n.jpg", new Rectangle(137,177,169,196)),
+                new Animal("240530842_563797005034045_5584967270335333443_n.jpg", new Rectangle(625,694,730,767))];
 var currentAnimal;
 var count = 0;
 $(document).ready(function(){
     document.body.style.opacity=1;
     setAnimal(animals[Math.floor(Math.random()*animals.length)]);
+    //setAnimal(animals[animals.length-4]);
     document.getElementById("boop-animal").addEventListener('click',function(event){
         bounds = this.getBoundingClientRect();
         var left=bounds.left;
@@ -86,6 +90,7 @@ $(document).ready(function(){
         var ih=this.naturalHeight
         var px=x/cw*iw
         var py=y/ch*ih
+        //alert(px+" "+py);
         if(currentAnimal.rectangle.containsPosition(px,py))
             setAnimal(animals[Math.floor(Math.random()*animals.length)]);
             
