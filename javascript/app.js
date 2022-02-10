@@ -71,13 +71,18 @@ let animals = [new Animal("128948171_118877180071505_2515716263979287604_n.jpg",
                 new Animal("271195188_450862449903110_3149505800413493754_n.jpg", new Rectangle(196,512,303,593)),
                 new Animal("268593143_255338459998512_3257250621246015360_n.jpg", new Rectangle(648,384,745,458)),
                 new Animal("270057190_608922453496294_6146720004026654589_n.jpg", new Rectangle(137,177,169,196)),
-                new Animal("240530842_563797005034045_5584967270335333443_n.jpg", new Rectangle(625,694,730,767))];
+                new Animal("240530842_563797005034045_5584967270335333443_n.jpg", new Rectangle(625,694,730,767)),
+                new Animal("272787675_633745944620155_4081664264523802517_n.jpg", new Rectangle(337,495,424,555)),
+                new Animal("20220128_103651.jpg", new Rectangle(1238,2192,1603,2453)),
+                new Animal("20220129_113810.jpg", new Rectangle(1107,1275,1555,1712)),
+                new Animal("20220129_114118.jpg", new Rectangle(1610,1494,1844,1755)),
+                new Animal("20220129_131049.jpg", new Rectangle(453,1762,1555,2939))];
 var currentAnimal;
 var count = 0;
 $(document).ready(function(){
     document.body.style.opacity=1;
     setAnimal(animals[Math.floor(Math.random()*animals.length)]);
-    //setAnimal(animals[animals.length-4]);
+    //setAnimal(animals[animals.length-1]);
     document.getElementById("boop-animal").addEventListener('click',function(event){
         bounds = this.getBoundingClientRect();
         var left=bounds.left;
